@@ -1,14 +1,9 @@
-.architect
-bootstrap.css
-bootstrap.js
-bootstrap.json
-bootstrap.jsonp
-build/
-classic.json
-classic.jsonp
-ext/
-modern.json
-modern.jsonp
-resources/sass/.sass-cache/
-resources/.arch-internal-preview.css
-.arch-internal-preview.css
+document.getElementById('colorful-text').addEventListener('input', function() {
+          var text = this.value;
+          var coloredText = '';
+          for (var i = 0; i < text.length; i++) {
+            var randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16); // تولید رنگ تصادفی
+            coloredText += '<span style="color:' + randomColor + '">' + text.charAt(i) + '</span>'; // اضافه کردن حرف با رنگ تصادفی
+          }
+          document.getElementById('colorful-output').innerHTML = coloredText; // نمایش حروف با رنگ تصادفی در span
+        });
